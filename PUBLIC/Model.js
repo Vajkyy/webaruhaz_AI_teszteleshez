@@ -1,12 +1,12 @@
 import { termekLista } from "./termekLista.js";
 class Model {
-    #termekLista=[]
-    #kosarLista=[]
- constructor() {
+  #termekLista = [];
+  #kosarLista = [];
+  constructor() {
     this.#termekLista = termekLista;
     this.#kosarLista = [];
-  } 
-getKosarLista() {
+  }
+  getKosarLista() {
     return this.#kosarLista;
   }
   addKosar(termek) {
@@ -14,9 +14,11 @@ getKosarLista() {
     if (existingItem) {
       existingItem.mennyiseg = (existingItem.mennyiseg || 1) + 1;
     } else {
-      this.#kosarLista.push({ ...termek, mennyiseg: 1 });
+      termek.mennyiseg = 1;
+      this.#kosarLista.push({...termek});
+      //this.#kosarLista.push({ ...termek, mennyiseg: 1 });
     }
-    console.log(this.#kosarLista);
+    //console.log(this.#kosarLista);
   }
   getTermekLista() {
     return this.#termekLista;
@@ -31,9 +33,11 @@ getKosarLista() {
   }
 
   removeKosarItem(id) {
-    console.log(Number(id));
-    this.#kosarLista = this.#kosarLista.filter((termek) => termek.id !== Number(id));
-    console.log(this.#kosarLista);
+    //console.log(Number(id));
+    this.#kosarLista = this.#kosarLista.filter(
+      (termek) => termek.id !== Number(id)
+    );
+    //console.log(this.#kosarLista);
   }
 
   increaseQuantity(id) {
@@ -61,8 +65,8 @@ getKosarLista() {
     }
     if (irany === "arSzerintNovevo") {
       this.#termekLista.sort((a, b) => a.ar - b.ar);
-    } 
-     if (irany === "arSzerintCsokkeno") {
+    }
+    if (irany === "arSzerintCsokkeno") {
       this.#termekLista.sort((a, b) => b.ar - a.ar);
     }
   }
@@ -81,7 +85,10 @@ getKosarLista() {
   }
 
   getKosarDarabszam() {
-    return this.#kosarLista.reduce((osszesDarab, termek) => osszesDarab + (termek.mennyiseg || 1), 0);
+    return this.#kosarLista.reduce(
+      (osszesDarab, termek) => osszesDarab + (termek.mennyiseg || 1),
+      0
+    );
   }
 }
 
