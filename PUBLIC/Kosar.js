@@ -9,7 +9,7 @@ class Kosar {
 
   megjelenit(lista) {
     this.#lista = lista || this.#lista;
-    console.log(this.#lista);
+    //console.log(this.#lista);
     this.#szuloElem.innerHTML = "";
     const table = document.createElement("table");
     table.classList.add("table", "table-striped");
@@ -50,7 +50,7 @@ class Kosar {
 
   bindEventListeners() {
     this.#szuloElem.querySelectorAll(".novel").forEach((button) => {
-      console.log(button.dataset.id);
+      //console.log(button.dataset.id);
       button.addEventListener("click", () => {        
         const event = new CustomEvent("novel", { detail: button.dataset.id });
         window.dispatchEvent(event);

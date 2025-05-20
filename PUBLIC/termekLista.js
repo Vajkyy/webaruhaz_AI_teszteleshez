@@ -1,6 +1,6 @@
 /* termékek listája */
 export const termekLista = [
-  {
+ /*  {
     id: 0,
     nev: "Termék 1",
     ar: 1000,
@@ -13,8 +13,8 @@ export const termekLista = [
     ar: 1300,
     kep: "./kepek/placeholder.jpg",
     leiras: "Ez egy példa termék leírása.",
-  },
-  {
+  }, */
+  /* {
     id: 2,
     nev: "Termék 3",
     ar: 1500,
@@ -27,5 +27,5 @@ export const termekLista = [
     ar: 2000,
     kep: "./kepek/placeholder.jpg",
     leiras: "Ez egy újabb példa termék leírása.",
-  },
+  }, */
 ];

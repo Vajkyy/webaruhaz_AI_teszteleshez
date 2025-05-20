@@ -72,7 +72,7 @@ class Model {
   }
 
   szuresTermekLista(keresesoKifejezes) {
-    console.log(keresesoKifejezes);
+    //console.log(keresesoKifejezes);
     if (!keresesoKifejezes || typeof keresesoKifejezes !== "string") {
       return this.#termekLista; // Ha a keresési kifejezés érvénytelen, az eredeti listát adja vissza
     }

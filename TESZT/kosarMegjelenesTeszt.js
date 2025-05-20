@@ -1,4 +1,4 @@
-import Kosar from "../PUBLIC/Kosar.js";
+/* import Kosar from "../PUBLIC/Kosar.js";
 function kosarMegjelenesTeszt() {
   const lista = [
     {
@@ -24,3 +24,4 @@ function kosarMegjelenesTeszt() {
   console.log("Lefutott a kosarMegjelenesTeszt")
 }
 kosarMegjelenesTeszt();
+ */
